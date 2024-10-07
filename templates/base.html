@@ -38,6 +38,12 @@
 
     <!-- PAGE CONTENTS -->
     {% block content %}{% endblock %}
+    <div class="container m-5">
+      <p class="display-1 text-light">Test Pages:</p>
+      <a href="{{ url_for('main_page') }}" class="btn btn-primary">Main Page</a>
+      <a href="{{ url_for('swapping_select_face') }}" class="btn btn-primary">Swapping Select Page</a>
+      <a href="{{ url_for('swapping_progress') }}" class="btn btn-primary">Swapping Progress Page</a>
+    </div>
 
     <!-- FOOTER SECTION -->
     <footer class="footer-bar">
