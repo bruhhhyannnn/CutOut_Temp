@@ -17,6 +17,11 @@ def swapping_select_face():
 	return render_template('/swapping-select-face.html')
 
 
+@app.route("/swapping_progress")
+def swapping_progress():
+	return render_template('/swapping-progress.html')
+
+
 if __name__ == '__main__':
 	app.run(debug=True)
 
