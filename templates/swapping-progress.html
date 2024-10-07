@@ -5,5 +5,31 @@
 {% block content %}
 
 <!-- SWAPPING PROGRESS SECTION -->
+<div class="overlay"></div>
+<main>
+  <div class="container p-5 mt-5 position-relative">
+    <div class="row text-center">
+      <div class="col-12">
+        <p class="display-1 fw-bold" style="color: #FEB866; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Your
+          image is
+          processing</p>
+      </div>
+      <div class="col-12">
+        <p class="h2 text-light " style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">Change
+          faces between photos and see the magic happen.</p>
+      </div>
+      <div class="col-12 mt-3">
+        <img class="img-fluid " src="https://fakeimg.pl/500x540?font=bebas" alt="Image picked for swapping"
+          style="filter: blur(5px);">
+      </div>
+    </div>
+  </div>
+</main>
+<div class="swapping-progress">
+  <img src="/icons/swapping-icon-progress.png" alt="Loading Image"
+    class="swapping-arrow position-absolute start-50 top-50 translate-middle" style="width: 150px">
+  <img src="/icons/loading-icon-progress.png" alt="Loading Image"
+    class="swapping-arrow position-absolute start-50 top-50 translate-middle" style="margin-top: 100px; width: 100px">
+</div>
 
 {% endblock %}
