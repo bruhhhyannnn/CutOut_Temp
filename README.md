@@ -5,7 +5,7 @@ This repository will contain our development with CutOut face swap project. It i
 ### Running the Application, Instruction:
 ###### Setup the project
 ```bash
- git clone https://github.com/bruhhhyannnn/CutOut-Temp.git
+ git clone https://github.com/bruhhhyannnn/__temp__CutOut
 ```
 ###### Create environment file
 ```bash
