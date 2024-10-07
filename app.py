@@ -7,6 +7,11 @@ def index():
 	return render_template('/base.html')
 
 
+@app.route("/main_page")
+def main_page():
+	return render_template('/main-page.html')
+
+
 if __name__ == '__main__':
 	app.run(debug=True)
 
