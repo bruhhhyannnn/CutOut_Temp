@@ -12,6 +12,11 @@ def main_page():
 	return render_template('/main-page.html')
 
 
+@app.route("/swapping_select_face")
+def swapping_select_face():
+	return render_template('/swapping-select-face.html')
+
+
 if __name__ == '__main__':
 	app.run(debug=True)
 
