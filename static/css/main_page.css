@@ -1,0 +1,37 @@
+/* MAIN STYLES */
+/* First Section */
+#first-section {
+	background-color: #2E75B5;
+}
+
+#first-section-button {
+	background-color: #FED966;
+	color: #2E75B5;
+}
+
+/* Second Section */
+#second-section {
+	background-color: #FFF;
+}
+
+#second-section h3 {
+	color: #2E75B5;
+	font-weight: bolder;
+}
+
+#second-section p {
+	color: #898989;
+	font-weight: bolder;
+}
+
+/* Third Section */
+#third-section {
+	background-color: #2E75B5;
+}
+
+#third-section-button {
+	background-color: #FED966;
+	color: #2E75B5;
+	margin-top: 120px;
+	border: none;
+}
