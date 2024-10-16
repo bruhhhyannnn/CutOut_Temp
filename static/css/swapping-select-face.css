@@ -1,10 +1,50 @@
-/* MAIN STYLES */
+/* SWAPPING SELECT FACE STYLES */
 #swapping-first-section {
 	color: #1f4f78e3;
 }
 
-#swapping-continue-button {
+#swap-select-face_continue-button,
+#modal-snap-button {
 	background-color: #FED966;
 	color: #2E75B5;
 	border: none;
+}
+
+#swap-select-face_continue-button:hover,
+#modal-snap-button:hover {
+	background-color: #fed866ea;
+}
+
+#swap-select-face_continue-button:active,
+#modal-snap-button:active {
+	background-color: #fed866b9;
+}
+
+.modal-content {
+	background-color: #2E75B5 !important;
+}
+
+.modal-button-close {
+	background-color: #FFF !important;
+}
+
+.swapping-container-image {
+	background-color: #2D5A7F;
+}
+
+.swapping-container-image:hover {
+	background-color: #2d5a7fdf;
+	cursor: pointer;
+}
+
+.swapping-container-image:active {
+	background-color: #2d5a7fbc;
+}
+
+#image-input-upload {
+	display: none;
+}
+
+#modal-canvas-element {
+	display: none;
 }
