@@ -4,82 +4,83 @@
 
 {% block content %}
 
-<!-- SWAPPING SELECTION FIRST SECTION -->
-<section id="swapping-first-section">
-  <div class="mt-0.5 p-5 text-center bg-light">
-    <h3 class="display-4 fw-bold">PICK A FACE</h3>
-    <p class="lead fs-3">Pick a face to use among the set templates</p>
-  </div>
-</section>
+<div class="select-face-page">
+  <section id="swapping-first-section">
+    <div class="mt-0.5 p-5 text-center bg-light">
+      <h3 class="display-4 fw-bold">PICK A FACE</h3>
+      <p class="lead fs-3">Pick a face to use among the set templates</p>
+    </div>
+  </section>
 
-<!-- SWAPPING SELECTION SECOND SECTION -->
-<section id="swapping-second-section">
-  <div class="container mt-3 p-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-5 text-center ">
-        <p class="display-5 text-light">Upload an Image</p>
-        <form action="#" method="post">
-          {{ csrf_token }}
-          <input type="file" id="image-input-upload" accept="image/png, image/jpeg">
-          <label for="image-input-upload" class="w-100">
-            <div class="rounded-5 p-5 swapping-container-image">
-              <img src="/img/swapping-select-upload-icon.png" class="img-fluid w-50" alt="Upload an Image">
-            </div>
-          </label>
-        </form>
-      </div>
-      <div class="col-auto my-auto text-center">
-        <h3 class="text-light">OR</h3>
-      </div>
-      <div class="col-lg-4 col-md-5 text-center">
-        <p class="display-5 text-light">Take a Picture</p>
-        <div class="rounded-5 p-5 swapping-container-image" onclick="startMediaDevice()" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop">
-          <img src="/img/swapping-select-take-picture-icon.png" class="img-fluid w-50" alt="Take a Picture">
+  <section id="swapping-second-section">
+    <div class="container mt-3 p-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-5 text-center ">
+          <p class="display-5 text-light">Upload an Image</p>
+          <form action="#" method="post">
+            {{ csrf_token }}
+            <input type="file" id="image-input-upload" accept="image/png, image/jpeg">
+            <label for="image-input-upload" class="w-100">
+              <div class="rounded-5 p-5 swapping-container-image">
+                <img src="/img/swapping-select-upload-icon.png" class="img-fluid w-50" alt="Upload an Image">
+              </div>
+            </label>
+          </form>
         </div>
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5 text-light" id="staticBackdropLabel">Take a Picture</h1>
-                <button type="button" class="btn-close modal-button-close" data-bs-dismiss="modal"
-                  aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <video id="modal-video-element" autoplay width="450" height="550"></video>
-                <canvas id="modal-canvas-element"></canvas>
-              </div>
-              <div class="modal-footer">
-                <a href="#" id="modal-download-button" download="captured-image.png">
-                  <button class="btn btn-secondary fw-bold" onclick="downloadImage(event)">Download</button>
-                </a>
-                <button class="btn btn-primary fw-bold" id="modal-snap-button" onclick="snapImage()"
-                  data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
-                  data-bs-content="Snapped Image!">Snap!</button>
+        <div class="col-auto my-auto text-center">
+          <h3 class="text-light">OR</h3>
+        </div>
+        <div class="col-lg-4 col-md-5 text-center">
+          <p class="display-5 text-light">Take a Picture</p>
+          <div class="rounded-5 p-5 swapping-container-image" onclick="startMediaDevice()" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            <img src="/img/swapping-select-take-picture-icon.png" class="img-fluid w-50" alt="Take a Picture">
+          </div>
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-light" id="staticBackdropLabel">Take a Picture</h1>
+                  <button type="button" class="btn-close modal-button-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <video id="modal-video-element" autoplay width="450" height="550"></video>
+                  <canvas id="modal-canvas-element"></canvas>
+                </div>
+                <div class="modal-footer">
+                  <a href="#" id="modal-download-button" download="captured-image.png">
+                    <button class="btn btn-secondary fw-bold" onclick="downloadImage(event)">Download</button>
+                  </a>
+                  <button class="btn btn-primary fw-bold" id="modal-snap-button" onclick="snapImage()"
+                    data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+                    data-bs-content="Snapped Image!">Snap!</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row mt-5">
-      <div class="col">
-        <p class="lead text-center text-light placeholder-glow" id="image-input-preview-text" aria-hidden="true">No
-          file uploaded. </p>
-        <p class="placeholder-glow text-center">
-          <span class="placeholder col-3 rounded-5 bg-light" style="display: none;" id="image-input-placeholder"></span>
-        </p>
+      <div class="row mt-5">
+        <div class="col">
+          <p class="lead text-center text-light placeholder-glow" id="image-input-preview-text" aria-hidden="true">No
+            file uploaded. </p>
+          <p class="placeholder-glow text-center">
+            <span class="placeholder col-3 rounded-5 bg-light" style="display: none;"
+              id="image-input-placeholder"></span>
+          </p>
+        </div>
+      </div>
+      <div class="row text-end mt-5">
+        <div class="col">
+          <button class="btn btn-secondary fw-bold me-3" id="swapping-back-button" href="#">Go Back</button>
+          <button class="btn btn-primary fw-bold" id="swap-select-face_continue-button" onclick="_continue()"
+            href="#">Continue</button>
+        </div>
       </div>
     </div>
-    <div class="row text-end mt-5">
-      <div class="col">
-        <button class="btn btn-secondary fw-bold me-3" id="swapping-back-button" href="#">Go Back</button>
-        <button class="btn btn-primary fw-bold" id="swap-select-face_continue-button" onclick="_continue()"
-          href="#">Continue</button>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
 
 {% endblock %}
